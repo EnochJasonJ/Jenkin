@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'poppins' , sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        {{person.name}}   
+    </h1>
+    <p>Age: {{person.age}}</p>
+    <a href="{% url 'update_view' person.pk %}">Edit</a>
+    <a href="{% url 'delete_view' person.pk %}">Delete</a> <hr>
+    <a href="{% url 'view_list' %}">Back</a>
+</body>
+</html>

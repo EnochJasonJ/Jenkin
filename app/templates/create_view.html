@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Views</title>
+    <style>
+        * {
+            font-family: 'poppins' , sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form input{
+            outline: none;
+            border: none;
+            border-bottom: 1.5px solid black;
+            text-align: center;
+        }
+
+        form button{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Add User</button>
+    </form>
+
+    <p>
+        <a href="{% url 'view_list' %}">Back</a>
+    </p>
+    
+</body>
+</html>
